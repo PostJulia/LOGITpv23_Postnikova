@@ -13,9 +13,6 @@ print("Igaüks maksab", hind/P)
 
 
 
-
-
-
 #9
 from random import*
 from math import*
@@ -27,7 +24,7 @@ try:
             c=float(input("c: "))
             #OK
             P=a+b+c
-            print("Ümbermõõt: ",P)
+            print("Ümbermõõt: ",P) 
         except :
             print("Viga c muutujaga!")
     except :
