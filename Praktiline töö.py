@@ -1,3 +1,29 @@
+print("Tere! Olen sinu uus sõber - Python!")
+nimi=input("Mis on sinu nimi? ").capitalize()
+print(nimi,", oi kui ilus nimi!")
+print(nimi,"! Kas leian Sinu keha indeksi? 0-ei, 1-jah => ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #from random import *
 #from datetime import *
 #a=10        #int
@@ -21,25 +47,25 @@
 
 
 
-##13 Jalgpalli meeskond
-#try:
-#    gender=input("Sugu: ")
-#    if gender.isalpha() and (gender.lower()=="naine" or gender.lower()=="mees"):
-#        if gender.lower()=="naine":
-#            print("Ei soobi")
-#        else:
-#            try:
-#                age=int(input("Vanus: "))
-#                if 16<=age<=18:
-#                    print("Oled meeskonnas!")
-#                else:
-#                    print("Vanus ei soobi!")
-#            except :
-#                print("Vale vanus! Viga andmetüübiga!")
-#    else:
-#        print("Sisesta õige tekst!")
-#except :
-#    print("Viga andmetüübiga!")
+#13 Jalgpalli meeskond
+try:
+    gender=input("Sugu: ")
+    if gender.isalpha() and (gender.lower()=="naine" or gender.lower()=="mees"):
+        if gender.lower()=="naine":
+            print("Ei soobi")
+        else:
+            try:
+                age=int(input("Vanus: "))
+                if 16<=age<=18:
+                    print("Oled meeskonnas!")
+                else:
+                    print("Vanus ei soobi!")
+            except :
+                print("Vale vanus! Viga andmetüübiga!")
+    else:
+        print("Sisesta õige tekst!")
+except :
+    print("Viga andmetüübiga!")
 
 
 
