@@ -1,3 +1,102 @@
+#from random import *
+#from datetime import *
+#a=10        #int
+#b=2.3       #float
+#c="programma" #str
+#d="1.1"    #str
+#print(b.is_integer()) #False "11111" #False "1.1"
+#print(c.isalpha()) #True "11111" #True "1.1"
+#print(d.isalpha()) #False "11111" #False "1.1"
+#print(d.isnumeric()) #True "11111" #False "1.1"
+#print(d.isdigit()) #True "11111" #False "1.1"
+#print(d.isdecimal()) #True "11111" #False "1.1"
+
+
+
+
+
+
+
+
+
+
+
+##13 Jalgpalli meeskond
+#try:
+#    gender=input("Sugu: ")
+#    if gender.isalpha() and (gender.lower()=="naine" or gender.lower()=="mees"):
+#        if gender.lower()=="naine":
+#            print("Ei soobi")
+#        else:
+#            try:
+#                age=int(input("Vanus: "))
+#                if 16<=age<=18:
+#                    print("Oled meeskonnas!")
+#                else:
+#                    print("Vanus ei soobi!")
+#            except :
+#                print("Vale vanus! Viga andmetüübiga!")
+#    else:
+#        print("Sisesta õige tekst!")
+#except :
+#    print("Viga andmetüübiga!")
+
+
+
+
+
+#12 Müük
+try:
+    hind = float(input("Sisesta toote hind: "))
+    if hind <0:
+        print("Hind ei saa olla negatiivne!")
+    elif hind<=10:
+        soodustus = hind * 0.1
+        okonnelik_hind = hind - soodustus
+        print("Lõplik hind on", okonnelik_hind, "€")
+    else: 
+        soodustus = hind * 0.2
+        okonnelik_hind = hind - soodustus
+        print("Lõplik hind on", okonnelik_hind, "€")
+except:
+    print("Palun sisestage teine ​​number!")
+
+
+
+
+
+#10
+from math import *
+try:
+    n1=float(input("Sisestage esimene number: "))
+    n2=float(input("Sisestage teine ​​number: "))
+except :
+    pass
+
+
+
+
+
+
+
+
+
+
+#9
+try:
+    s1=float(input("Sisestage ruudu esimese külje pikkus: "))
+    s2=float(input("Sisestage ruudu teise külje pikkus: "))
+    if s1==s2:
+        print("See on ruut!")
+    else:
+        print("See ei ole ruut!")
+except :
+    print("Kuskil on viga, vaata tüüpi, nagu sa andmed määrasid!")
+
+
+
+
+
 #8 Poes
 from random import *
 from datetime import *
