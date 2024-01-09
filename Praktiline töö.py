@@ -2,8 +2,15 @@ print("Tere! Olen sinu uus sõber - Python!")
 nimi=input("Mis on sinu nimi? ").capitalize()
 print(nimi,", oi kui ilus nimi!")
 print(nimi,"! Kas leian Sinu keha indeksi? 0-ei, 1-jah => ")
-
-
+vastus=float(input("Vastus: "))
+try:
+    if vastus.isalpha() and (vastus.lower()=="0" or vastus.lower()=="1"):
+        if vastus.lower()=="0":
+            print("Kahju! See on väga kasulik info!")
+        else:
+            
+except :
+    print
 
 
 
