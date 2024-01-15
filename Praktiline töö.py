@@ -2,10 +2,11 @@ print("Tere! Olen sinu uus sõber - Python!")
 nimi = input("Mis on sinu nimi?: ").capitalize()
 print(nimi + ", oi kui ilus nimi!")
 vastus = input(nimi + "! Kas leian Sinu keha indeksi? 0-ei, 1-jah => ")
-if vastus == "0":
-    if vastus == "1":
-        pikkus = int(input("Sisesta oma pikkus (cm): "))
-        mass = float(input("Sisesta oma kaal (kg): "))
+try:
+    if vastus == "0":
+        if vastus == "1":
+            pikkus = int(input("Sisesta oma pikkus (cm): "))
+            mass = float(input("Sisesta oma kaal (kg): "))
         indeks = mass / (0.01 * pikkus) ** 2
         print(nimi + ", Sinu keha indeks on: ".format(indeks))
         if indeks < 16:
@@ -23,13 +24,9 @@ if vastus == "0":
         else:
            print("Tervisele ohtlik rasvumine")
     else:
-        print("Kohtumiseni, " + nimi + "! Igavesti Sinu, Python!")
-else:
-    print("Kahju! See on väga kasulik info!")
-
-
-
-
+         print("Kohtumiseni, " + nimi + "! Igavesti Sinu, Python!")
+except :
+       print("Kahju! See on väga kasulik info!")
 
 
 
