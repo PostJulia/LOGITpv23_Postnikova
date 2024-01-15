@@ -2,72 +2,30 @@ print("Tere! Olen sinu uus sõber - Python!")
 nimi = input("Mis on sinu nimi?: ").capitalize()
 print(nimi + ", oi kui ilus nimi!")
 vastus = input(nimi + "! Kas leian Sinu keha indeksi? 0-ei, 1-jah => ")
-if vastus == "0":
-    if vastus == "1":
+if vastus == "1":
    try:
        pikkus = int(input("Sisesta oma pikkus: "))
        mass = float(input("Sisesta oma kaal: "))
        indeks = mass/(0.01 * pikkus)**2
        print(nimi + ", Sinu keha indeks on: "+ str(indeks))
-        if indeks < 16:
+       if indeks < 16:
            print("Tervisele ohtlik alakaal")
-        elif 16 <= indeks < 19:
+       elif 16 <= indeks < 19: 
            print("Alakaal")
-        elif 19 <= indeks < 25:
+       elif 19 <= indeks < 25:
            print("Normaalkaal")
-        elif 25 <= indeks < 30:
+       elif 25 <= indeks < 30:
            print("Ülekaal")
-        elif 30 <= indeks < 35:
+       elif 30 <= indeks < 35:
            print("Rasvumine")
-        elif 35 <= indeks < 40:
+       elif 35 <= indeks < 40:
            print("Tugev rasvumine")
-        else:
+       else:
            print("Tervisele ohtlik rasvumine")
-    else:
-        print("Kohtumiseni, " + nimi + "! Igavesti Sinu, Python!")
-else:
-    print("Kahju! See on väga kasulik info!")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#print("Tere! Olen sinu uus sõber - Python!")
-#nimi=input("Mis on sinu nimi? ").capitalize()
-#print(nimi,", oi kui ilus nimi!")
-#print(nimi,"! Kas leian Sinu keha indeksi? 0-ei, 1-jah => ")
-#vastus=float(input("Vastus: "))
-#try:
-#    if vastus.isalpha() and (vastus.lower()=="0" or vastus.lower()=="1"):
-#        if vastus.lower()=="0":
-#            print("Kahju! See on väga kasulik info!")
-#        else:
-            
-#except :
-#    print
-
-
-
-
-
-
-
-
+   except ValueError:
+       print("Kohtumiseni, " + nimi + "! Igavesti Sinu, Python!")
+else:      
+   print("Kahju! See on väga kasulik info!")
 
 
 
