@@ -4,8 +4,8 @@ print(nimi + ", oi kui ilus nimi!")
 vastus = input(nimi + "! Kas leian Sinu keha indeksi? 0-ei, 1-jah => ")
 if vastus == "1":
    try:
-       pikkus = int(input("Sisesta oma pikkus (cm): "))
-       mass = float(input("Sisesta oma kaal (kg): "))
+       pikkus = int(input("Sisesta oma pikkus: "))
+       mass = float(input("Sisesta oma kaal: "))
        indeks = mass/(0.01 * pikkus)**2
        print(nimi + ", Sinu keha indeks on: "+ str(indeks))
        if indeks < 16:
