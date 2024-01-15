@@ -28,8 +28,6 @@ if vastus == "0":
 else:      
    print("Kahju! See on väga kasulik info!")
 
-
-
 #from random import *
 #from datetime import *
 #a=10        #int
