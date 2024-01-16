@@ -111,6 +111,9 @@ else:
 
 #5
 vastus=float(input("Введите число: "))
+if vastus.isdigit():
+   number=int(vastus)
+    if number%1==0:
 
 
 
