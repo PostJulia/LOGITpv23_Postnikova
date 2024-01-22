@@ -26,6 +26,33 @@ if vastus == "1":
        print("Kohtumiseni, " + nimi + "! Igavesti Sinu, Python!")
 else:      
    print("Kahju! See on väga kasulik info!")
+nimi = input("Mis on sinu nimi?: ").capitalize()
+print(nimi + ", oi kui ilus nimi!")
+vastus = input(nimi + "! Kas leian Sinu keha indeksi? 0-ei, 1-jah => ")
+if vastus == "1":
+   try:
+       pikkus = int(input("Sisesta oma pikkus: "))
+       mass = float(input("Sisesta oma kaal: "))
+       indeks = mass/(0.01 * pikkus)**2
+       print(nimi + ", Sinu keha indeks on: "+ str(indeks))
+       if indeks < 16:
+           print("Tervisele ohtlik alakaal")
+       elif 16 <= indeks < 19: 
+           print("Alakaal")
+       elif 19 <= indeks < 25:
+           print("Normaalkaal")
+       elif 25 <= indeks < 30:
+           print("Ülekaal")
+       elif 30 <= indeks < 35:
+           print("Rasvumine")
+       elif 35 <= indeks < 40:
+           print("Tugev rasvumine")
+       else:
+           print("Tervisele ohtlik rasvumine")
+   except ValueError:
+       print("Kohtumiseni, " + nimi + "! Igavesti Sinu, Python!")
+else:      
+   print("Kahju! See on väga kasulik info!")
 
 
 
@@ -50,12 +77,6 @@ else:
 #print(d.isnumeric()) #True "11111" #False "1.1"
 #print(d.isdigit()) #True "11111" #False "1.1"
 #print(d.isdecimal()) #True "11111" #False "1.1"
-
-
-
-
-
-
 
 
 
