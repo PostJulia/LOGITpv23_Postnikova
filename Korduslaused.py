@@ -1,5 +1,104 @@
 from random import *
 from datetime import *
+#15
+katsed=0
+while True:
+    vastus=input("Osta elevant ära! Kirjuta 'elevant': ")
+    katsed+=1
+
+    if vastus.lower()=='elevant':
+        print(f"Õige! Ostsid elevanti ära {katsed} katsega.")
+        break
+    else:
+        print("Vale vastus. Proovi uuesti.")
+
+
+
+
+
+#10
+for arv in range(1,101):
+    if arv%5==0:
+        print(arv)
+
+
+
+
+
+
+#9
+korrutamine=["5"]
+arv=["1","2","3","4","5","6","7","8","9","10"]
+for i in range(10):
+    tulemus=int(arv[i])*5
+    print(f"{arv[i]}*5={tulemus}")
+
+
+korrutamine=5
+
+for i in range(1,11):
+    tulemus=(i)*5
+    print(f"{i}*5={tulemus}")
+
+
+
+
+
+#8
+paaris=0
+paaritu=0
+for i in range(1,101):
+    if i%2==0:
+        print(f"{i}-paaris")
+        paaris+=1
+    else:
+        print(f"{i}-paaritu")
+        paaritu+=1
+
+print(f"Paarisarvude arv: {paaris}")
+print(f"Paaritute arvude arv: {paaritu}")
+
+
+
+#7
+for i in range(5):
+    number=randint(0,9)
+    print(number, end="")
+print()
+
+
+
+
+
+
+
+#5
+N=0
+while True:
+   O=N*N 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#4
+korrutamine=1
+for i in range(1,11):
+    tulemus=(i)*1
+    print(f"{i}*1={tulemus}")
+
+
+
+
 #3
 k=0
 while True:
@@ -18,11 +117,6 @@ while True:
     print("{0}+{1}={2}".format(a,b,a+b))
         
     if k==5:break
-
-
-
-
-
 
 
 
