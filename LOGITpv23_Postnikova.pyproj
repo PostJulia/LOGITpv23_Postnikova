@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>26607bd6-f57f-4213-ad4d-18485fa4e166</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Korduslaused.py</StartupFile>
+    <StartupFile>Vigade otsing - 2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,6 +24,7 @@
   <ItemGroup>
     <Compile Include="Korduslaused.py" />
     <Compile Include="LOGITpv23_Postnikova.py" />
+    <Compile Include="Vigade otsing - 2.py" />
     <Compile Include="Praktiline töö.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />

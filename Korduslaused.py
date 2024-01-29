@@ -16,6 +16,70 @@ while True:
 
 
 
+#14 Korrutustabel
+for j in range(1,11):
+    for i in range(1,11):
+        print(f"{j*i:2}",end=" ")
+    print()
+   
+
+
+
+
+
+
+#13
+print("Arv Ruut Kuup")
+print()
+
+for i in range(1,11):
+    ruut=i**2
+    kuup=i**3
+    print(f"{i:2} {ruut:2} {kuup:3}")
+
+
+
+
+#12 Pank
+algsumma=float(input("Mis summa paneme panka?"))
+alg=lõppsumma=algsumma
+intress=randint(1,10)
+print(f"Paned panka summa, mis võrdub {algsumma}. Intress on {intress}")
+aastad=int(input("Mitmeks aastaks?"))
+print("Aasta Algsumma Intress Aasta_lõpuks")
+for i in range(1, aastad+1):
+    intsumma=(algsumma*intress)/100
+    lõppsumma=algsumma+intsumma
+    print(f"{i} {algsumma} {intsumma} {lõppsumma}")
+    algsumma=lõppsumma
+print(f"Summa kokku: {lõppsumma} Eur")
+print(f"Kasum: {lõppsumma-alg} Eur")
+
+
+
+
+#11
+number=randint(1,100)
+katsed=3
+while katsed>0:
+    külaline==int(input("Угадайте число от 1 до 100: "))
+    if külaline==number:
+        print("Поздравляем, вы угадали число!")
+        break
+    else:
+        katsed-=1
+        print(f"Неверно. У вас осталось {katsed} попыток.")
+        if katsed==0:
+            print(f"Извините, вы использовали всё попытки. Загаданное число было {number}.")
+            veelkord=input("Хотите ли угадать?: ").lower()
+            if veelkord.lower()=="нет":
+                break
+            else:
+                katsed=3
+
+
+
+
 #10
 for arv in range(1,101):
     if arv%5==0:
@@ -198,6 +262,12 @@ paevad=["Esmaspäev","Teisipäev","Kolmapäev","Neljapäev","Reede","Laupäev","
 tunnid=["8 tundi","9 tundi","4 tundi","9 tundi","6 tundi","tunde pole","tunde pole"]
 for i in range(7):
     print(paevad[i]+"-"+tunnid[i])
+
+
+
+
+
+
 
 #8 Poes korduslausega
 arve_nr=datetime.now() # date.today()
