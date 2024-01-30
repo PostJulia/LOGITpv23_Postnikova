@@ -20,12 +20,12 @@ while g<=100:
 #3
 from random import *
 from math import *
-#n=randint(1,30)
-#h=randint(1,5)
-#for j in range(h):
-#    for i in range(n):
-#        r=sum(h)/n
-#    print(r)
+n=randint(1,30)
+h=randint(1,5)
+for j in range(h):
+    for i in range(n):
+        r=sum(h)/n
+    print(r)
 
 
 

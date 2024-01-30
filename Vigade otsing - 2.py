@@ -52,5 +52,8 @@ else:
         print(c)
     print()
     print("Hüpotees on õige")
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3ef3998abb4019e6d3ae01bf6cf85a1efd872b43
 
