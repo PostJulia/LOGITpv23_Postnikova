@@ -61,6 +61,7 @@ print(f"Kasum: {lõppsumma-alg} Eur")
 #11
 number=randint(1,100)
 katsed=3
+
 while katsed>0:
     külaline==int(input("Угадайте число от 1 до 100: "))
     if külaline==number:
