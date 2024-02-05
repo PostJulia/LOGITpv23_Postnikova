@@ -4,16 +4,18 @@ while True:
     if valik=="add":
         valik=input("\tKas lisame mitu inimest(mitu) või positsioomile(pos)\n").lower()
         try:
-            if valik=="mitu":
-                mitu=int(input("Mitu inimest lisame? "))
-                for i in range(mitu):
-                    nimi=input("Sisesta nimi: ").capitalize()
-                    nimed.append(nimi)      
+            pass
         except :
-            else:
-                indeks=int(input("Kuhu lisamine? "))
-                nimi=input("Mis nimi: ").capitalize()
-                nimed.insert(indeks-1,nimi)
+            pass
+        if valik=="mitu":
+            mitu=int(input("Mitu inimest lisame? "))
+            for i in range(mitu):
+                nimi=input("Sisesta nimi: ").capitalize()
+                nimed.append(nimi)
+        else:
+            indeks=int(input("Kuhu lisamine? "))
+            nimi=input("Mis nimi: ").capitalize()
+            nimed.insert(indeks-1,nimi)
     elif valik=="del":
         valik=input("Kas kustutame nimi(nimi) või indeksi järgi(ind)?\n").lower()
         if valik=="nimi":
