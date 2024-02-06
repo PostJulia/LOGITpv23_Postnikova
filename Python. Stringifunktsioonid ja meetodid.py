@@ -1,4 +1,4 @@
- #swapcase()
+#swapcase()
 #swapcase() muudab kõik väikesed tähed suurtähtedeks ja kõik suured tähed väikesteks tähtedeks
 m="TeRe HoMmIkUsT".swapcase()
 print(m)
