@@ -1,3 +1,15 @@
+#S1*3
+#S1*3 kasutatakse stringi kordamiseks määratud arv kordi
+S1="Tere hommikust!"
+r=S1*3
+print(r)
+
+
+
+
+
+
+
 #S1+S2
 #S1+S2 ühendab kaks stringi üheks
 s1="Tere, "
