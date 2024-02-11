@@ -3,7 +3,7 @@
 #Valik 1, kus string sisaldab ainult tähti 
 p1="Tere!"
 t=p1.isalpha()
-print(t)  # Выводит True, так как строка содержит только буквы
+print(t)
 #Variant 2, kus string sisaldab tähti ja numbreid 
 p2="Tere1234!"
 u=p2.isalpha()
