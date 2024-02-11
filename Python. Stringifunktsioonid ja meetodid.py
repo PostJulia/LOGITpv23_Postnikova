@@ -1,3 +1,18 @@
+#isalpha()
+#isalpha kasutatakse stringi kontrollimiseks, st kas string sisaldab tähti või mitte, ja pole vahet, kas täht on suur või väike 
+#Valik 1, kus string sisaldab ainult tähti 
+p1="Tere!"
+t=p1.isalpha()
+print(t)  # Выводит True, так как строка содержит только буквы
+#Variant 2, kus string sisaldab tähti ja numbreid 
+p2="Tere1234!"
+u=p2.isalpha()
+print(u)
+
+
+
+
+
 #isdigit()
 #isdigit() kasutatakse stringi kontrollimiseks, st selle, kas string sisaldab numbreid või mitte
 #Valik 1, kus rida koosneb ainult numbritest
