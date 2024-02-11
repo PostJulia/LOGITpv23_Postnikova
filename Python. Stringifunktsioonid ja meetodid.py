@@ -1,6 +1,6 @@
 #isdigit()
 #isdigit() kasutatakse stringi kontrollimiseks, st selle, kas string sisaldab numbreid või mitte
-#1 valik, kus rida koosneb ainult numbritest
+#Valik 1, kus rida koosneb ainult numbritest
 v1="12345"
 l= v1.isdigit()
 print(l)
