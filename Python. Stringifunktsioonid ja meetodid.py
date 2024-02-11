@@ -1,3 +1,17 @@
+#isdigit()
+#isdigit() kasutatakse stringi kontrollimiseks, st selle, kas string sisaldab numbreid või mitte
+#1 valik, kus rida koosneb ainult numbritest
+v1="12345"
+l= v1.isdigit()
+print(l)
+#Valik 2, kus rida koosneb numbritest ja tähtedest
+v2="123abc"
+i= v2.isdigit()
+print(i)
+
+
+
+
 #S1*3
 #S1*3 kasutatakse stringi kordamiseks määratud arv kordi
 S1="Tere hommikust!"
