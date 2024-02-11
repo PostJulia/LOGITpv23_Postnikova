@@ -1,3 +1,14 @@
+#S1+S2
+#S1+S2 ühendab kaks stringi üheks
+s1="Tere, "
+s2="hommikust!"
+b=s1+s2
+print(b)
+
+
+
+
+
 #swapcase()
 #swapcase() muudab kõik väikesed tähed suurtähtedeks ja kõik suured tähed väikesteks tähtedeks
 m="TeRe HoMmIkUsT".swapcase()
