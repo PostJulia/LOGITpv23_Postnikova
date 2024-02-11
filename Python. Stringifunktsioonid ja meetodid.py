@@ -1,3 +1,21 @@
+#isalnum()
+#isalnum() kasutatakse stringi kontrollimiseks, kas string sisaldab tähti ja numbreid või mitte
+#Valik 1, kus string koosneb tähtedest ja numbritest 
+a1="Tere1234"
+e=a1.isalnum()
+print(e)
+#Valik 2, kus string koosneb tähtedest, numbritest ja muudest sümbolitest 
+a2="Tere1234€@&$"
+c= a2.isalnum()
+print(c)
+
+
+
+
+
+
+
+
 #isalpha()
 #isalpha kasutatakse stringi kontrollimiseks, st kas string sisaldab tähti või mitte, ja pole vahet, kas täht on suur või väike 
 #Valik 1, kus string sisaldab ainult tähti 
