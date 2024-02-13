@@ -1,14 +1,3 @@
-for j in 'Hi! I\'m mister Robert':
-	if j == '\'':
-	  print("Найдено")
-	  break
-else:
-	print ("Готово")
-
-
-
-
-
 #2.3
 from random import *
 vanused=[]
