@@ -62,5 +62,5 @@ while True:
                  if nim==nimi:
                      ind=nimed.index(nimi,ind+1)
                      print(f"{nimi} on indeksiga {ind}")
-                 else:
-                     print(f"{nimi} ei ole nimekirjas")
+         else:
+             print(f"{nimi} ei ole nimekirjas")
