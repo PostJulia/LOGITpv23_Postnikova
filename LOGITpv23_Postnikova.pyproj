@@ -27,6 +27,7 @@
     <Compile Include="Kontrolltöö Kordused.py" />
     <Compile Include="Järjendid.py" />
     <Compile Include="Listid.py" />
+    <Compile Include="Kasutud numbrid.py" />
     <Compile Include="Python. Stringifunktsioonid ja meetodid.py" />
     <Compile Include="Vigade otsing - 2.py" />
     <Compile Include="Praktiline töö.py" />

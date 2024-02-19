@@ -138,9 +138,7 @@ print()
 
 
 #5
-N=0
-while True:
-   O=N*N 
+
 
 
 
