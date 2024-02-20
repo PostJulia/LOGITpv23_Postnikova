@@ -1,3 +1,20 @@
+#6
+from string import *
+from random import *
+list_=[]
+m=randint(1,30)
+for i in range(m):
+    list_.insert(i,randint(1,1000))
+print(list_)
+max_=max(list_)
+print("Maximum: ", max_,", Kokku:",m)
+arv=max_//m
+indeks=list_.index(max_)
+list_[indeks]=arv
+print(list_)
+
+
+
 #4 Index
 from string import *
 from random import *
@@ -8,7 +25,7 @@ while True:
         break
     else:
         print("Ainult 5 numbriline arv saab kontrollida!")
-
+ 
 print(indeks,"kasutatakse",Indeksid[int(indeks[0])-1],"piirkonnas")
 if int(indeks[0]) in [1,2,3]:
     print("Püsi kodus!")

@@ -8,7 +8,7 @@ if number >0:
        print("Number paarisarv")
     else:
         print("Number pole paaris")
-elif number <0:
+elif number<0:
     print("Number on negatiivne")
 else:
     print("Number on null")
