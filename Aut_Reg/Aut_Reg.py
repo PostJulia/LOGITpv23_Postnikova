@@ -3,6 +3,8 @@ from MinuOmaMoodul import *
 salasõnad=[]
 kasutajanimed=[]
 while True:
+    print(kasutajanimed)
+    print(salasõnad)
     print("1-registreerimine\n2-autoriseerimine\n3-nime või parooli muutmine\n4-unustanud parooli taastamine\n5-lõpetamine")
     vastus=int(input("Sisestage arv "))
     if vastus==1:
@@ -13,8 +15,19 @@ while True:
         autoriseerimine(kasutajanimed,salasõnad)
     elif vastus==3:
         print("Nime või parooli muutmine")
+        vastus=input("Kas muudame nime, parooli või mõlemad ")
+        if vastus=="nimi":
+            kasutajanimed=muutmine(kasutajanimed)
+        elif vastus=="parool":
+            salasõnad=muutmine(salasõnad)
+        elif vastus=="mõlemad":
+            print("Nimi muutmine: ")
+            kasutajanimed=muutmine(kasutajanimed)
+            print("Parooli muutmine: ")
+            salasõnad=muutmine(salasõnad)
     elif vastus==4:
         print("Unustanud parooli taastamine")
+        kasutajanimed, salasõnad=taastamine(kasutajanimed, salasõnad)
     elif vastus==5:
         print("Lõpetamine")
         break

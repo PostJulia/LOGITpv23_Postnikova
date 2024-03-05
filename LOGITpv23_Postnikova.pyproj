@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>26607bd6-f57f-4213-ad4d-18485fa4e166</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>FunktsioonideKasutamine.py</StartupFile>
+    <StartupFile>Mäng Kivi paber käärid.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>

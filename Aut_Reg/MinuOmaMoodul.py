@@ -47,19 +47,40 @@ def autoriseerimine(kasutajad:list,paroolid:list):
     p=0
     while True:
         nimi=input("Sisesta kasutajanimi: ")
-        parool=input("Sisesta salasõna: ")
-        p+=1
         if nimi in kasutajad:
-            if kasutajad.index(nimi)==paroolid.index(parool):
-                print (f"Tere tulemast! {nimi}")
-                break
-            else:
-                print("Vale nimi või salasõna!")
-                if p==5:
-                    print("Proovi uuesti 10 sek pärast")
-                    for i in range(10):
-                        sleep(1)
-                        print(f"On jäänud {10-i} sek")
+            while True:
+                parool=input("Sisesta salasõna: ")
+                p+=1
+                try:
+                    if kasutajad.index(nimi)==paroolid.index(parool):
+                        print (f"Tere tulemast! {nimi}")
+                        break
+                except:
+                    print("Vale nimi või salasõna!")
+                    if p==5:
+                        print("Proovi uuesti 10 sek pärast")
+                        for i in range(10):
+                            sleep(1)
+                            print(f"On jäänud {10-i} sek")
         else:
             print("Kasutajat pole")
+        break
+def muutmine(list_:list):
+    """Funktsioon 
+    """
+    muutuja=input("Vana nimi või parool: ")
+    if muutuja in list_:
+        indeks=list_.index(muutuja)
+        muutuja=input("Uus nimi või parool: ")
+        list_[indeks]=muutuja
+    return list_
+def taastamine(paroolid:list):
+    """Funktsioon
+    """
+    vana_parool=input("Sisesta vana parool ")
+    if kasutajad.index(nimi)==paroolid.index(parool):
+        print("Parool on õige")
+    else:
+        print("Parool on vale")
+
 
