@@ -1,6 +1,7 @@
 from string import *
 from time import sleep
-def registreerimine(kasutajad:list,paroolid:list)->any:
+from os import path, remove
+def registreerimine(Kasutajad=[],Salasõnad=[])->any:
     """Funktsioon tagastab kasutajad ja paroolid listid:
     :param list kasutajad:Kasutaja peab sisestama kasutajanime ja see tuleks nimekirja lisada
     :param list paroolid:Kasutaja peab sisestama parooli ja see parool tuleb nimekirja lisada
@@ -8,9 +9,13 @@ def registreerimine(kasutajad:list,paroolid:list)->any:
     """
     while True:
         nimi=input("Mis on sinu nimi? ")
-        if nimi not in kasutajad:
+        if nimi not in Kasutajad:
+            f=open(Kasutajad,'a')
+            Kasutajad.append()
             while True:
                 parool=input("Mis on sinu parool? ")
+                Salasõnad.append()
+                f=open(Salasõnad,'a')
                 flag_p=False
                 flag_l=False
                 flag_u=False
@@ -27,15 +32,16 @@ def registreerimine(kasutajad:list,paroolid:list)->any:
                         elif p in digits:
                             flag_d=True
                     if flag_p and flag_u and flag_l and flag_d:
-                        kasutajad.append(nimi)
-                        paroolid.append(parool)
+                        Kasutajad.append(nimi)
+                        Salasõnad.append(parool)
                     break
                 else:
                     print("Nõrk salasõna!")
             break
         else:
             print("Selline kasutaja on juba olemas!")
-    return kasutajad, paroolid
+    return Kasutajad, Salasõnad
+    f.close()
 def autoriseerimine(kasutajad:list,paroolid:list):
     """Funktsioon kuvab ekraanile "Tere tulemast!" kui kasutaja on olemas nimekirjas
          Nimi on järjendis kasutajad
@@ -74,13 +80,43 @@ def muutmine(list_:list):
         muutuja=input("Uus nimi või parool: ")
         list_[indeks]=muutuja
     return list_
+def loe_failist(fail:str)->list:
+    """Funktsioon loeb tekst *.txt failist
+    """
+    f=open(fail,'r',encoding="utf-8")
+    järjend=[]
+    for rida in f:
+        järjend.append(rida.strip())
+    f.close()
+    return järjend
+def kirjuta_failisse(fail:str,järjend=[]):
+    """Salvestame tekst failisse
+    """
+    n=int(input("Mitu: "))
+    for i in range(n):
+        järjend.append(input(f"{i+1}. sõna: "))
+    f=open(fail,'a', encoding="utf-8")
+    for element in järjend:
+        f.write(element+"\n")
+    f.close()
+
+def ümber_kirjuta_fail(fail:str):
+    """
+    """
+    f=open(fail,'w')
+    text=input("Sisesta tekst:")
+    f.write(text+"\n")
+    f.close()
+def failide_kustutamine():
+    """
+    """
+    failinimi=input("Mis fail tahad eemaldada?") #path.isdir("Kaust")
+    if path.isfile(failinimi):
+        remove(failinimi)
+        print(f"Fail {failinimi} oli kustutatud")
+    else:
+        print(f"Fail {failinimi} puudub")
+
 def taastamine(paroolid:list):
     """Funktsioon
-    """
-    vana_parool=input("Sisesta vana parool ")
-    if kasutajad.index(nimi)==paroolid.index(parool):
-        print("Parool on õige")
-    else:
-        print("Parool on vale")
-
-
+    """ 

@@ -1,7 +1,7 @@
 from MinuOmaMoodul import *
 
-salasõnad=[]
-kasutajanimed=[]
+salasõnad=loe_failist("Salasõnad.txt")
+kasutajanimed=loe_failist("Kasutajad.txt")
 while True:
     print(kasutajanimed)
     print(salasõnad)
@@ -27,7 +27,7 @@ while True:
             salasõnad=muutmine(salasõnad)
     elif vastus==4:
         print("Unustanud parooli taastamine")
-        kasutajanimed, salasõnad=taastamine(kasutajanimed, salasõnad)
+        kasutajanimed,salasõnad=taastamine(kasutajanimed,salasõnad)
     elif vastus==5:
         print("Lõpetamine")
         break
