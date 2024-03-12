@@ -91,7 +91,7 @@ def kirjuta_failisse(fail:str,järjend=[]):
     n=int(input("Mitu: "))
     for i in range(n):
         järjend.append(input(f"{i+1}. sõna: "))
-    f=open(fail,'a', encoding="utf-8")
+    f=open(fail,'w', encoding="utf-8")
     for element in järjend:
         f.write(element+"\n")
     f.close()
@@ -99,7 +99,7 @@ def kirjuta_failisse(fail:str,järjend=[]):
 def ümber_kirjuta_fail(fail:str):
     """
     """
-    f=open(fail,'w')
+    f=open(fail,'a')
     text=input("Sisesta tekst:")
     f.write(text+"\n")
     f.close()
