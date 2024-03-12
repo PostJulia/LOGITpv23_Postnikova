@@ -1,2 +1,12 @@
 Esimine nädala päev?:Esmaspäev
 Viimane aasta kuu?:Detsember
+Mis värvi on taevas?:Sinine
+Mitu päeva on nädalas?:Seitse
+Mis linn on Prantsusmaa pealinn?:Pariis
+Mis on maailma kõrgeima mäe nimi?:Everest
+Kes kirjutas romaani "Sõda ja rahu"?:Lev Tolstoi
+Mis loom on Hiina sümbol?:Draakon
+Mis linn on Itaalia pealinn?:Rooma
+Mis on inimkonna minevikku uuriva teadusliku distsipliini nimi?:Arheoloogia
+Mis gaas moodustab suurema osa Maa atmosfäärist?:Lämmastik
+Mis on maailma suurima kõrbe nimi?:Sahara

@@ -21,8 +21,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Küsimustik.py" />
     <Compile Include="MinuOmaMoodul.py" />
+    <Compile Include="Küsimustik.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Ankeet.txt" />
