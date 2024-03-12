@@ -30,6 +30,11 @@ while True:
         kasutajanimed,salasõnad=taastamine(kasutajanimed,salasõnad)
     elif vastus==5:
         print("Lõpetamine")
+        Salasõnad.txt=registreerimine(muutmine(Salasõnad:str,salasõnad=[])):
+        Kasutajad.txt=registreerimine(muutmine(Kasutajad:str,kasutajanimed=[])):
+        f=open(Salasõnad,'a', encoding="utf-8")
+        f=open(Kasutajad,'a', encoding="utf-8")
+        f.close()
         break
     else:
         print("Tundmatu valik")

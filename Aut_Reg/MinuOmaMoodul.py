@@ -1,7 +1,7 @@
 from string import *
 from time import sleep
 from os import path, remove
-def registreerimine(Kasutajad=[],Salasõnad=[])->any:
+def registreerimine(kasutajad:list,paroolid:list)->any:
     """Funktsioon tagastab kasutajad ja paroolid listid:
     :param list kasutajad:Kasutaja peab sisestama kasutajanime ja see tuleks nimekirja lisada
     :param list paroolid:Kasutaja peab sisestama parooli ja see parool tuleb nimekirja lisada
@@ -9,13 +9,9 @@ def registreerimine(Kasutajad=[],Salasõnad=[])->any:
     """
     while True:
         nimi=input("Mis on sinu nimi? ")
-        if nimi not in Kasutajad:
-            f=open(Kasutajad,'a')
-            Kasutajad.append()
+        if nimi not in kasutajad:
             while True:
                 parool=input("Mis on sinu parool? ")
-                Salasõnad.append()
-                f=open(Salasõnad,'a')
                 flag_p=False
                 flag_l=False
                 flag_u=False
@@ -32,15 +28,15 @@ def registreerimine(Kasutajad=[],Salasõnad=[])->any:
                         elif p in digits:
                             flag_d=True
                     if flag_p and flag_u and flag_l and flag_d:
-                        Kasutajad.append(nimi)
-                        Salasõnad.append(parool)
+                        kasutajad.append(nimi)
+                        paroolid.append(parool)
                     break
                 else:
                     print("Nõrk salasõna!")
             break
         else:
             print("Selline kasutaja on juba olemas!")
-    return Kasutajad, Salasõnad
+    return kasutajad, paroolid
     f.close()
 def autoriseerimine(kasutajad:list,paroolid:list):
     """Funktsioon kuvab ekraanile "Tere tulemast!" kui kasutaja on olemas nimekirjas
