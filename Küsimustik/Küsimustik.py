@@ -14,11 +14,11 @@ if vastus==1:
     punktid=küsimus_vastus(kus_vas, N)
     salvesta(osaleja_nimi, punktid, "Oiged.txt", "Valed.txt")
     print("\nEdukalt läbinud osalejad:")
-    oiged_fail=open("oiged.txt",'r',encoding='utf-8')
+    oiged_fail=open("Oiged.txt",'r',encoding='utf-8')
     print(oiged_fail.read())
     oiged_fail.close()
     print("\nEbaõnnestunud osalejad:")
-    valed_fail=open("valed.txt",'r',encoding='utf-8')
+    valed_fail=open("Valed.txt",'r',encoding='utf-8')
     print(valed_fail.read())
     valed_fail.close()
 

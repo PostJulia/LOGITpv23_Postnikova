@@ -10,3 +10,4 @@ Mis linn on Itaalia pealinn?:Rooma
 Mis on inimkonna minevikku uuriva teadusliku distsipliini nimi?:Arheoloogia
 Mis gaas moodustab suurema osa Maa atmosfäärist?:Lämmastik
 Mis on maailma suurima kõrbe nimi?:Sahara
+Kas taevas on sinine?:Jah
