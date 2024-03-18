@@ -20,22 +20,22 @@ from random import *
 def autoriseerimine(kasutajad:list, paroolid:list):
     p=0
     while True:
-       if kasutajad.index(kasutaja)==paroolid.index(parool):
         kasutaja=input("Sisestage kasutajanimi: ")
         parool=input("Sisestage parool: ")
-        print("Sisselogimine õnnestus!")
-        return kasutaja
-       else:
-        p+=1
-        print("Vale nimi või salasõna!")
-       if p==5:
-           print("Proovi uuesti 10 sek pärast")
-           for i in range(10):
-               sleep(1)
-               print(f"On jäänud {10-i} sek")
-       else:
-          print("Kasutajat pole")
-          break
+        if kasutajad.index(kasutaja)==paroolid.index(parool):
+            print("Sisselogimine õnnestus!")
+            return kasutaja
+        else:
+            p+=1
+            print("Vale nimi või salasõna!")
+            if p==5:
+                print("Proovi uuesti 10 sek pärast")
+                for i in range(10):
+                    sleep(1)
+                    print(f"On jäänud {10-i} sek")
+            else:
+                print("Kasutajat pole")
+                break
     
 def loe(Ankeet:str):
     fail=open(Ankeet,"r",encoding="utf-8")
@@ -57,7 +57,7 @@ def lisa(kus_vas, Ankeet:str):
 
 def küsimus_vastus(kus_vas, n):
     punktid=0
-    küsimused=random.sample(list(kus_vas), n)
+    küsimused=random.sample(kus_vas, n)
     for küsimus in küsimused:
         print(küsimus)
         vastus=input("Vastus: ").strip()
