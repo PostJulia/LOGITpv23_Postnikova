@@ -11,5 +11,4 @@ Mis on inimkonna minevikku uuriva teadusliku distsipliini nimi?:Arheoloogia
 Mis gaas moodustab suurema osa Maa atmosfäärist?:Lämmastik
 Mis on maailma suurima kõrbe nimi?:Sahara
 Kas taevas on sinine?:Jah
-Kas taevast on sininne?:Jah
-Kas sa oled tüdruk?:Jah
+

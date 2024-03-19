@@ -21,6 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Email.py" />
     <Compile Include="MinuOmaMoodul.py" />
     <Compile Include="Küsimustik.py" />
   </ItemGroup>

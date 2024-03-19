@@ -1,6 +1,6 @@
 from string import *
 from time import sleep
-from random import *
+import random
 #def loe_ankeet(fail:str)->any:
 #    fail=open(fail,"r",encoding="utf-8")
 #    kus=[]
@@ -57,14 +57,14 @@ def lisa(kus_vas, Ankeet:str):
 
 def küsimus_vastus(kus_vas, n):
     punktid=0
-    küsimused=random.sample(kus_vas, n)
+    küsimused=random.choices(list(kus_vas), k=n)
     for küsimus in küsimused:
         print(küsimus)
         vastus=input("Vastus: ").strip()
         if vastus.lower()==kus_vas[küsimus].lower():
             punktid+=1
     return punktid
-
+    
 def salvesta(osaleja_nimi, punktid, Oiged:str, Valed:str):
     if punktid>len("kus_vas")/2:
         oiged=open(Oiged, 'a', encoding='utf-8')
