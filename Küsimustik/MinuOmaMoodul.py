@@ -49,24 +49,25 @@ def loe(Ankeet:str):
         fail.close()
         return kus,vas
 
-def lisa(kus_vas, Ankeet:str):
+def lisa(kus,vas, Ankeet:str):
     fail=open(Ankeet, 'a', encoding='utf-8')
-    for küsimus, vastus in kus_vas.items():
+    for küsimus, vastus in kus,vas.items():
         fail.write(f"{küsimus}:{vastus}\n")
     fail.close()
 
-def küsimus_vastus(kus_vas, n):
+def küsimus_vastus(kus,vas, N):
     punktid=0
-    küsimused=random.choices(list(kus_vas), k=n)
-    for küsimus in küsimused:
-        print(küsimus)
-        vastus=input("Vastus: ").strip()
-        if vastus.lower()==kus_vas[küsimus].lower():
-            punktid+=1
-    return punktid
+    küsimused=random.sample(list(kus), N>=0)
+    while True:
+        for küsimus in küsimused:
+            print(küsimus)
+            vastus=input("Vastus: ").strip()
+            if vastus==küsimus:
+                punktid+=1
+        return punktid
     
 def salvesta(osaleja_nimi, punktid, Oiged:str, Valed:str):
-    if punktid>len("kus_vas")/2:
+    if punktid>len("kus,vas")/2:
         oiged=open(Oiged, 'a', encoding='utf-8')
         oiged.write(f"{osaleja_nimi}\n")
         oiged.close()

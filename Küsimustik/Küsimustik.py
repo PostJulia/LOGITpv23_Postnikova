@@ -2,7 +2,7 @@ from MinuOmaMoodul import *
 
 kasutajad=["Julia"]
 paroolid=["Postu"]
-kus_vas=loe("Ankeet.txt")
+kus,vas=loe("Ankeet.txt")
 
 while True:
     print("1-soorita test\n2-logi administraatorina sisse\n3-lõpetamine")
@@ -12,13 +12,11 @@ while True:
         print("Soorita test")
         osaleja_nimi=input("Palun sisestage oma nimi: ")
         N=int(input("Mitu küsimust soovid esitada? "))
-        punktid=küsimus_vastus(kus_vas, N)
+        punktid=küsimus_vastus(kus,vas, N)
         salvesta(osaleja_nimi, punktid, "Oiged.txt", "Valed.txt")
-        print("\nEdukalt läbinud osalejad:")
         oiged_fail=open("Oiged.txt",'r',encoding='utf-8')
         print(oiged_fail.read())
         oiged_fail.close()
-        print("\nEbaõnnestunud osalejad:")
         valed_fail=open("Valed.txt",'r',encoding='utf-8')
         print(valed_fail.read())
         valed_fail.close()
@@ -40,8 +38,8 @@ while True:
 
 #kus_vas={}
 
-#    küsimused, vastused=loe_ankeet("Ankeet.txt")
-#    print(küsimused)
-#    print(vastused)
-#    for i in range(len(küsimused)):
-#        print(f"{i+1}. Küsimus on: "+küsimused[i]+" vastus on: "+vastused[i])
+#küsimused, vastused=loe_ankeet("Ankeet.txt")
+#print(küsimused)
+#print(vastused)
+#for i in range(len(küsimused)):
+#    print(f"{i+1}. Küsimus on: "+küsimused[i]+" vastus on: "+vastused[i])

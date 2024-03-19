@@ -1,5 +1,6 @@
 import smtplib, ssl
 from email.message import EmailMessage
+import imghdr
 smtp_server="smtp.gmail.com"
 port=587 #For starttls
 sender_email="postjulia2007@gmail.com"
@@ -10,7 +11,10 @@ msg=EmailMessage()
 msg.set_content("Tere tulemast! Olen kirja keha!")
 msg['Subject']="Kirja teema"
 msg['From']="Julia Postnikova" #Nimi ka saab kirjutada #Kellelt
-msg['To']="marina.oleinik@tthk.ee" #Kellele
+msg['To']="marina.oleinik@tthk.ee" #Kellele   marina.oleinik@tthk.ee
+with open("welcome.jpg",'rb') as fpilt:
+    pilt=fpilt.read()
+msg.add_attachment(pilt,maintype='image',subtype=imghdr.what(None, pilt))
 try:
     server=smtplib.SMTP(smtp_server,port)
     server.starttls(context=context) #Secure the connection
