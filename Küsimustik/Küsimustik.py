@@ -25,7 +25,7 @@ while True:
         autoriseerimine(kasutajad,paroolid)
         uued={}
         uute_arv=int(input("Mitu uut küsimust soovid lisada? "))
-        for i in range(uute_arv):
+        for i in range(uute_arv): 
             küsimus=input("Sisestage uus küsimus: ")
             vastus=input("Sisestage vastus uuele küsimusele: ")
             uued[küsimus]=vastus

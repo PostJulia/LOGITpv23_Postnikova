@@ -61,7 +61,7 @@ def küsimus_vastus(kus, N):
     for küsimus in küsimused:
         print(küsimus)
         vastus=input("Vastus: ").strip()
-        if vastus==küsimus:
+        if vastus==:
             punktid+=1
     return punktid
     

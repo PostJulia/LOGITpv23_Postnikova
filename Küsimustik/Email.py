@@ -11,7 +11,7 @@ msg=EmailMessage()
 msg.set_content("Tere tulemast! Olen kirja keha!")
 msg['Subject']="Kirja teema"
 msg['From']="Julia Postnikova" #Nimi ka saab kirjutada #Kellelt
-msg['To']="marina.oleinik@tthk.ee" #Kellele   marina.oleinik@tthk.ee
+msg['To']="karinalinter7@gmail.com" #Kellele   marina.oleinik@tthk.ee
 with open("welcome.jpg",'rb') as fpilt:
     pilt=fpilt.read()
 msg.add_attachment(pilt,maintype='image',subtype=imghdr.what(None, pilt))

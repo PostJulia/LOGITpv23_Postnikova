@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d9d61aad-d5de-4602-9a6e-8bad917176fd</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Küsimustik.py</StartupFile>
+    <StartupFile>Email.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
