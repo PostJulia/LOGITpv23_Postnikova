@@ -1,4 +1,6 @@
 from tkinter import *
+from tkinter import messagebox as mb
+from tkinter import simpledialog as sd
 
 def tehtudvalik(var):
     f=var.get()
@@ -7,9 +9,16 @@ def tehtudvalik(var):
     else:
         texbox.configure(show="*")
 def textpealkirjasse():
-    t=texbox.get()
-    pealkiri.configure(text=t)
-    texbox.delete(0,END)
+    vastus=mb.askquestion("Küsimus","Kas tõesti tahad info kopeerida?")
+    if vastus=='yes':
+        mb.showwarning("Tähelepanu","Kohe teiseldatakse info!")
+        t=texbox.get()
+        pealkiri.configure(text=t)
+        texbox.delete(0,END)
+    else:
+        mb.showinfo("Valik oli tehtud","Info jääb omal kohal")
+        nimi=sd.askstring("Saame tuttavaks!","Mis on sinu nimi?") #askinteger(),askfloat()
+        pealkiri.configure(text=nimi)
 aken=Tk()
 aken.geometry("500x500")
 aken.title("Akna pealkiri")
