@@ -1,6 +1,9 @@
 from tkinter import *
 from tkinter import messagebox as mb
-
+from tkinter import simpledialog as sd
+import smtplib
+from email.message import EmailMessage
+import imghdr
 def tehtudvalik(var, nimi, text):
     f=var.get()
     if f:
@@ -25,16 +28,28 @@ def reg():
     else:
         mb.showerror("Registreerimine", "Kasutajanimi on juba registreeritud!")
 def muuda():
-    kasutajanimi_uus=kasutaja_muuda.get()
-    parool_uus=texbox_muuda.get()
-    uus_kasutaja_info=(kasutajanimi_uus, parool_uus)
-    vana_kasutaja_info=(kasutaja.get(), texbox.get())
-    if vana_kasutaja_info in kasutajad:
-        kasutajad.remove(vana_kasutaja_info)
-        kasutajad.append(uus_kasutaja_info)
+    vana_kasutajanimi=kasutaja_muuda.get()
+    vana_parool=texbox_muuda.get()
+    uus_kasutajanimi=uus_kasutaja.get()
+    uus_parool=uus_texbox.get()
+    kasutaja_info=(vana_kasutajanimi, vana_parool)
+    if kasutaja_info in kasutajad:
+        kasutajad.remove(kasutaja_info)
+        kasutajad.append((uus_kasutajanimi, uus_parool))
         mb.showinfo("Muuda nime ja paroolit", "Kasutaja andmed edukalt muudetud!")
     else:
         mb.showerror("Muuda nime ja paroolit", "Sellist kasutajat ei leitud!")
+def send_gmail():
+    vastus=mb.askquestion("Küsimus","Kas soovite saada teatist meili teel?")
+    if vastus=='yes':
+        mb.showwarning("Tähelepanu","Kohe teiseldatakse info!")
+        t=texbox.get()
+        pealkiri.configure(text=t)
+        texbox.delete(0,END)
+    else:
+        mb.showinfo("Valik oli tehtud","Info jääb omal kohal")
+        nimi=sd.askstring("Saame tuttavaks!","Mis on sinu nimi?") #askinteger(),askfloat()
+        pealkiri.configure(text=nimi)
 aken=Tk()
 aken.geometry("700x700")
 aken.title("Autoriseerimine või registreerimine")
@@ -56,11 +71,13 @@ kasutaja2=Entry(raam2, bg="#08ffd2", fg="#13ad9e", cursor="star", font="Kunstler
 texbox2=Entry(raam2, bg="#08ffd2", fg="#13ad9e", cursor="star", font="Kunstler_Script 16", width=16, show="*")
 valik2=Checkbutton(raam2, image=pilt2, variable=var, onvalue=True, offvalue=False, command=lambda: tehtudvalik(var,valik2,texbox2))
 nupp2=Button(raam2, text="Registreerima", bg="#08ffd2", fg="#13ad9e", cursor="star", width=16, command=reg)
-pealkiri3 = Label(aken, text="Muuda nime ja paroolit", bg="#08ffd2", fg="#13ad9e", cursor="star", font="Kunstler_Script 16", justify=CENTER, height=1, width=50)
-raam3 = Frame(aken)
-kasutaja_muuda = Entry(raam3, bg="#08ffd2", fg="#13ad9e", cursor="star", font="Kunstler_Script 16", width=16)
-texbox_muuda = Entry(raam3, bg="#08ffd2", fg="#13ad9e", cursor="star", font="Kunstler_Script 16", width=16, show="*")
-nupp_muuda = Button(raam3, text="Muudab nime ja paroolit", bg="#08ffd2", fg="#13ad9e", cursor="star", width=16, command=muuda)
+pealkiri3=Label(aken, text="Muuda nime ja paroolit", bg="#08ffd2", fg="#13ad9e", cursor="star", font="Kunstler_Script 16", justify=CENTER, height=1, width=50)
+raam3=Frame(aken)
+kasutaja_muuda=Entry(raam3, bg="#08ffd2", fg="#13ad9e", cursor="star", font="Kunstler_Script 16", width=16)
+texbox_muuda=Entry(raam3, bg="#08ffd2", fg="#13ad9e", cursor="star", font="Kunstler_Script 16", width=16, show="*")
+uus_kasutaja=Entry(raam3, bg="#08ffd2", fg="#13ad9e", cursor="star", font="Kunstler_Script 16", width=16)
+uus_texbox=Entry(raam3, bg="#08ffd2", fg="#13ad9e", cursor="star", font="Kunstler_Script 16", width=16, show="*")
+nupp_muuda=Button(raam3, text="Muudab nime ja paroolit", bg="#08ffd2", fg="#13ad9e", cursor="star", width=16, command=muuda)
 pealkiri.pack()
 raam.pack()
 kasutaja.grid(row=0, column=0)
@@ -77,5 +94,7 @@ pealkiri3.pack()
 raam3.pack()
 kasutaja_muuda.grid(row=0, column=0)
 texbox_muuda.grid(row=0, column=1)
-nupp_muuda.grid(row=0, column=2)
+uus_kasutaja.grid(row=1, column=0) 
+uus_texbox.grid(row=1, column=1)  
+nupp_muuda.grid(row=2, columnspan=2)
 aken.mainloop()
