@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import messagebox as mb
 from tkinter import simpledialog as sd
-import smtplib
+import smtplib, ssl
 from email.message import EmailMessage
 import imghdr
 def tehtudvalik(var, nimi, text):
@@ -20,6 +20,9 @@ def aut():
     else:
         mb.showerror("Autentimine", "Kasutajanimi ei ole registreeritud!")
 def reg():
+    mail=sd.askstring("Kirjuta oma e-posti!","Kuhu saada kirja?")
+    password=sd.askstring("Kirjuta oma parool!", "Kirjuta oma salasõna")
+    email(mail,password)   #tysd ozgv tyvd hvlw 
     kasutajanimi2=kasutaja2.get()
     parool2=texbox2.get()
     if (kasutajanimi2,parool2) not in kasutajad:
@@ -39,20 +42,27 @@ def muuda():
         mb.showinfo("Muuda nime ja paroolit", "Kasutaja andmed edukalt muudetud!")
     else:
         mb.showerror("Muuda nime ja paroolit", "Sellist kasutajat ei leitud!")
-def send_gmail():
-    vastus=mb.askquestion("Küsimus","Kas soovite saada teatist meili teel?")
-    if vastus=='yes':
-        mb.showwarning("Tähelepanu","Kohe teiseldatakse info!")
-        t=texbox.get()
-        pealkiri.configure(text=t)
-        texbox.delete(0,END)
-    else:
-        mb.showinfo("Valik oli tehtud","Info jääb omal kohal")
-        nimi=sd.askstring("Saame tuttavaks!","Mis on sinu nimi?") #askinteger(),askfloat()
-        pealkiri.configure(text=nimi)
+def email(mail:str, password:str):
+    smtp_server="smtp.gmail.com"
+    port=587
+    sender_email="postjulia2007@gmail.com"
+    password=password
+    context=ssl.create_default_context()
+    msg=EmailMessage()
+    msg.set_content("")
+    msg['Subject']="Olete edukalt registreeritud!"
+    msg['From']="Julia Postnikova" 
+    msg['To']=mail
+    try:
+        server=smtplib.SMTP(smtp_server,port)
+        server.starttls(context=context) 
+        server.login(sender_email,password)
+        server.send_message(msg) 
+    finally:
+        server.quit()
 aken=Tk()
 aken.geometry("700x700")
-aken.title("Autoriseerimine või registreerimine")
+aken.title("Autoriseerimine ja registreerimine")
 aken.configure(bg="#08ffa8")
 aken.iconbitmap("ico.ico")
 kasutajad=[]
