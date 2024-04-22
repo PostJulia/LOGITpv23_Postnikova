@@ -2,15 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>4c832e08-1d67-44ac-95a8-8c78be1b7da5</ProjectGuid>
+    <ProjectGuid>2a512da1-60cf-458f-aa2a-ae0d1d69b595</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Aut.py</StartupFile>
+    <StartupFile>Graafik.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>Tkinteri_kasutamine</Name>
-    <RootNamespace>Tkinteri_kasutamine</RootNamespace>
+    <Name>Graafik</Name>
+    <RootNamespace>Graafik</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,18 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Aut.py" />
-    <Compile Include="Tkinter.py" />
-    <Compile Include="Tkinteri_kasutamine.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="1.ico" />
-    <Content Include="2.png" />
-    <Content Include="3.png" />
-    <Content Include="4.png" />
-    <Content Include="ico.ico" />
-    <Content Include="Kasutajad.txt" />
-    <Content Include="star.png" />
+    <Compile Include="Graafik.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
