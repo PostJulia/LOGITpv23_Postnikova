@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4c832e08-1d67-44ac-95a8-8c78be1b7da5</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Aut.py</StartupFile>
+    <StartupFile>Tkinteri_kasutamine.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,7 +22,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Aut.py" />
-    <Compile Include="Tkinter.py" />
     <Compile Include="Tkinteri_kasutamine.py" />
   </ItemGroup>
   <ItemGroup>
