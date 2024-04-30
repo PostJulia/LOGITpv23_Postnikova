@@ -1,15 +1,15 @@
 import tkinter as tk
 import random
 
-def laadi_sõnad(sõnad_fail):
+def laadi(sõnad_fail):
     with open(sõnad_fail, 'r', encoding='utf-8') as fail:
         sõnad=[rivi.strip().upper() for rivi in fail if len(rivi.strip())==5]
     return sõnad
 
-def vali_sõna(sõnad):
+def vali(sõnad):
     return random.choice(sõnad)
 
-def kontrolli_sõna(arvamine, sõna):
+def kontrolli(arvamine, sõna):
     tulemus=[]
     for i, täht in enumerate(arvamine):
         if täht==sõna[i]:
@@ -20,51 +20,51 @@ def kontrolli_sõna(arvamine, sõna):
             tulemus.append("#080808")
     return tulemus
 
-def uuenda_liidest(arvamine, tulemus):
+def liidest(arvamine, tulemus):
     for i, täht in enumerate(arvamine):
-        sisestus=sisestused[hetke_üritus][i]
+        sisestus=sisestused[üritus][i]
         sisestus.delete(0, 'end')
         sisestus.insert('end', täht)
         sisestus.config(disabledforeground=tulemus[i], state='disabled')
 
 def saatmine():
-    global hetke_üritus, hetke_sõna
+    global üritus, hetke
     arvamine=arvamine_muutuja.get().upper()
     if len(arvamine)!=5:
-        tulemus_silt.config(text="Sõna peab olema 5 tähemärki pikk!")
+        tulemus.config(text="Sõna peab olema 5 tähemärki pikk!")
         return
     
-    tulemus=kontrolli_sõna(arvamine, hetke_sõna)
-    uuenda_liidest(arvamine, tulemus)
+    tulemus=kontrolli(arvamine, hetke)
+    liidest(arvamine, tulemus)
 
-    if arvamine==hetke_sõna or hetke_üritus==5:
-        if arvamine!=hetke_sõna:
-            tulemus_silt.config(text=f"Õige sõna: {hetke_sõna}", fg="#ff0000")
+    if arvamine==hetke or üritus==5:
+        if arvamine!=hetke:
+            tulemus.config(text=f"Õige sõna: {hetke}", fg="#ff0000")
         else:
-            tulemus_silt.config(text="")
+            tulemus.config(text="")
         for sisestusrida in sisestused:
             for sisestus in sisestusrida:
                 sisestus.config(state='disabled')
     else:
-        hetke_üritus+=1
-        tulemus_silt.config(text=f"Jäänud püüdeid: {6 - hetke_üritus}")
+        üritus+=1
+        silt.config(text=f"Jäänud püüdeid: {6 - üritus}")
         arvamine_muutuja.set("")
 
-def algus_uuesti():
-    global hetke_sõna, hetke_üritus
-    hetke_sõna=vali_sõna(sõnad)
-    hetke_üritus=0
+def algus():
+    global hetke, üritus
+    hetke=vali(sõnad)
+    üritus=0
     arvamine_muutuja.set("")
-    tulemus_silt.config(text="")
+    silt.config(text="")
 
     for sisestusrida in sisestused:
         for sisestus in sisestusrida:
             sisestus.config(state='normal')
             sisestus.delete(0, 'end')
 
-sõnad=laadi_sõnad('Sõnad.txt')
-hetke_sõna=vali_sõna(sõnad)
-hetke_üritus=0
+sõnad=laadi('Sõnad.txt')
+hetke=vali(sõnad)
+üritus=0
 
 aken=tk.Tk()
 aken.title("Wordle")
@@ -84,12 +84,13 @@ arvamine_sisestus=tk.Entry(põhiraam, textvariable=arvamine_muutuja, font=('Taho
 arvamine_sisestus.grid(row=7, column=0, columnspan=5, padx=10, pady=10)
 
 saatmis_nupp=tk.Button(põhiraam, text="Saada", command=saatmine, bg="#928aff", fg="#87ceeb")
-saatmis_nupp.grid(row=8, column=0, columnspan=5, padx=10, pady=10)
+saatmis_nupp.grid(row=8, column=0, columnspan=3, padx=5, pady=10)
 
-tulemus_silt=tk.Label(põhiraam, text="", font=('Tahoma', 24), bg="#87ceeb", fg="#ffffff")  
-tulemus_silt.grid(row=9, column=0, columnspan=5, padx=10, pady=10)
+silt=tk.Label(põhiraam, text="", font=('Tahoma', 24), bg="#87ceeb", fg="#ffffff")  
+silt.grid(row=9, column=0, columnspan=5, padx=10, pady=10)
 
-algus_uuesti_nupp=tk.Button(põhiraam, text="Alusta uuesti", command=algus_uuesti, bg="#928aff", fg="#87ceeb")
-algus_uuesti_nupp.grid(row=10, column=0, columnspan=5, padx=10, pady=10)
+
+algus_uuesti_nupp=tk.Button(põhiraam, text="Alusta uuesti", command=algus, bg="#928aff", fg="#87ceeb")
+algus_uuesti_nupp.grid(row=8, column=1, columnspan=5, padx=5, pady=10)
 
 aken.mainloop()
