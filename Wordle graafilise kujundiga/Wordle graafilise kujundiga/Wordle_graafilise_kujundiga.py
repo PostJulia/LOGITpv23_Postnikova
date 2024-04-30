@@ -60,6 +60,9 @@ def algus():
             sisestus.config(state='normal')
             sisestus.delete(0, 'end')
 
+#tähestik = "a b d e f g h i j k l m n o p r s š z ž t u v õ ä ö ü".split()
+
+
 sõnad=laadi('Sõnad.txt')
 hetke=vali(sõnad)
 üritus=0
@@ -72,13 +75,13 @@ aken.config(bg='#87ceeb')
 põhiraam=tk.Frame(aken, bg="#87ceeb")
 põhiraam.pack(expand=True)
 
-sisestused=[[tk.Entry(põhiraam, font=('Tahoma', 24), width=2, bg="#928aff", fg="#87ceeb") for _ in range(5)] for _ in range(6)]
+sisestused=[[tk.Entry(põhiraam, font=('Tahoma', 24), width=4, bg="#928aff", fg="#87ceeb") for _ in range(5)] for _ in range(6)]
 for i, rida in enumerate(sisestused):
     for j, sisestus in enumerate(rida):
-        sisestus.grid(row=i, column=j, padx=10, pady=10)
+        sisestus.grid(row=i, column=j, padx=3, pady=12)
 
 saatmis=tk.Button(põhiraam, text="Saada", command=saatmine, bg="#928aff", fg="#87ceeb")
-saatmis.grid(row=6, column=0, columnspan=3, padx=5, pady=10)
+saatmis.grid(row=6, column=0, columnspan=3, padx=5, pady=15)
 
 jäänud=tk.Label(põhiraam, text="", font=('Tahoma', 24), bg="#87ceeb", fg="#ffffff")  
 jäänud.grid(row=7, column=0, columnspan=5, padx=10, pady=10)
