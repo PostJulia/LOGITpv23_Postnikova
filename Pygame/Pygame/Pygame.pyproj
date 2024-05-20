@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4118ccea-57bc-4c3d-9fbc-a86fa523b6e3</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Lumemees.py</StartupFile>
+    <StartupFile>Funktsioonid.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,11 +21,15 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Funktsioonid.py" />
+    <Compile Include="Kujundid suvalises kohas.py" />
     <Compile Include="Lumemees.py" />
+    <Compile Include="Mängu jooksutamine.py" />
     <Compile Include="Pygame.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Sipsik.xcf" />
+    <Content Include="win.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
