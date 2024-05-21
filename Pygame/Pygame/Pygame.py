@@ -4,6 +4,20 @@ ekraani_pind=pygame.display.set_mode( (640, 480))
 ekraani_pind.fill( (0,0,255))
 pygame.display.set_caption("Minu esimene aken")
 
+#1
+pygame.mixer.music.load('lazarev.mp3')
+pygame.mixer.music.play()
+
+#2
+#sounds = ['snd1.mp3', 'snd2.mp3', 'snd3.mp3', 'snd4.mp3', 'snd5.mp3']
+#pygame.mixer.music.load('music/'+random.choice(sounds))
+#pygame.mixer.music.play()
+
+#3
+#hit_sound = pygame.mixer.Sound('music/Hit.wav')
+#pygame.mixer.Sound.play(hit_sound)
+
+
 ristkylik1=pygame.Rect(0, 380, 700, 100)
 pygame.draw.rect(ekraani_pind, (0,255,0), ristkylik1)
 

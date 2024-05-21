@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4118ccea-57bc-4c3d-9fbc-a86fa523b6e3</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Funktsioonid.py</StartupFile>
+    <StartupFile>Kokkupõrke tuvastamine.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,12 +22,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Funktsioonid.py" />
+    <Compile Include="Kokkupõrke tuvastamine.py" />
     <Compile Include="Kujundid suvalises kohas.py" />
+    <Compile Include="Kujundite animeerimine.py" />
     <Compile Include="Lumemees.py" />
     <Compile Include="Mängu jooksutamine.py" />
+    <Compile Include="Pildi animeerimine.py" />
+    <Compile Include="Pildi animeerimine2.py" />
     <Compile Include="Pygame.py" />
+    <Compile Include="Rect.py" />
+    <Compile Include="Surface.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="lazarev.mp3" />
+    <Content Include="pall.xcf" />
     <Content Include="Sipsik.xcf" />
     <Content Include="win.jpg" />
   </ItemGroup>
