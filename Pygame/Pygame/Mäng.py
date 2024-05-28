@@ -85,7 +85,7 @@ while not gameover:
     pygame.display.set_caption("Score: " + str(score))
     print(score)
     
-    #if score==1200:
-    #    gameover=True
+    if score==1200:
+        gameover=True
 
 pygame.quit()
