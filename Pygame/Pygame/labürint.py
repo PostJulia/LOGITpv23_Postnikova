@@ -9,8 +9,8 @@ cols, rows = scr_w // cell_size, scr_h // cell_size
 screen = pygame.display.set_mode((scr_w, scr_h))
 pygame.display.set_caption('Labürint')
 
-#pygame.mixer.music.load('audio.mp3')
-#pygame.mixer.music.play()
+pygame.mixer.music.load('audio.mp3')
+pygame.mixer.music.play()
 
 lBlue = (153, 255, 255)
 lPurple = (204, 153, 255)
