@@ -5,8 +5,8 @@ ekraani_pind.fill( (0,0,255))
 pygame.display.set_caption("Minu esimene aken")
 
 #1
-pygame.mixer.music.load('lazarev.mp3')
-pygame.mixer.music.play()
+#pygame.mixer.music.load('lazarev.mp3')
+#pygame.mixer.music.play()
 
 #2
 #sounds = ['snd1.mp3', 'snd2.mp3', 'snd3.mp3', 'snd4.mp3', 'snd5.mp3']

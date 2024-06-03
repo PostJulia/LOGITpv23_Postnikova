@@ -9,8 +9,8 @@ cols, rows = scr_w // cell_size, scr_h // cell_size
 screen = pygame.display.set_mode((scr_w, scr_h))
 pygame.display.set_caption('Labürint')
 
-pygame.mixer.music.load('audio.mp3')
-pygame.mixer.music.play()
+#pygame.mixer.music.load('audio.mp3')
+#pygame.mixer.music.play()
 
 lBlue = (153, 255, 255)
 lPurple = (204, 153, 255)
@@ -108,6 +108,7 @@ def next_level():
         end_game()
 
 def end_game():
+    #pygame.mixer.music.stop()
     while True:
         screen.fill(lBlue)
         end_text = font.render("Sa oled kõik tasemed läbinud!", True, black)
@@ -133,6 +134,7 @@ def restart_game():
     level = 0
     grid = generate_maze()
     reset_player()
+    #pygame.mixer.music.play()
 
 grid = generate_maze()
 
